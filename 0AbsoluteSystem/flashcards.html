@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiszki</title>
+    <link rel="stylesheet" href="cssy/flashcards.css">
+</head>
+<body>
+
+    <div class="top-bar-container">
+        <header>
+            <h1>Fiszki</h1>
+        </header>
+        
+        <div class="sub-bar">
+            <nav>
+                <!-- Dodane emotikony do tekstów guzików -->
+                <a href="index.html">🌟 Główna</a>
+                <a href="search.html">🔎 Wyszukiwarka</a>
+                <a href="flashcards.html">🃏 Fiszki</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="page-title-container">
+        <h2>Fiszki</h2>
+        <div class="title-line"></div>
+    </div>
+
+    <div class="rating-bar theme-blue">
+        <div class="rating-line"></div>
+        <div class="rating-badge"></div> <div class="rating-line"></div>
+    </div>
+
+    <div class="flashcards-modes-container">
+        <button id="practice-btn">Praktyka</button>
+        <button id="categories-btn">Kategorie</button>
+    </div>
+
+    <div class="bulk-selection-section">
+        <span class="bulk-title">Zaznacz wszystkie:</span>
+        <div id="groups-container" class="groups-buttons-container">
+            </div>
+    </div>
+
+    <div id="categories-selection-container" class="categories-container"></div>
+
+    <div id="practice-container" class="flashcard-card-view hidden">
+        <div class="flashcard-box">
+            <p id="flashcard-text">Tutaj pojawi się pytanie...</p>
+            <p id="flashcard-hint"></p> 
+        </div>
+        
+        <div class="flashcard-counters">
+            <div id="counter-good" class="counter good">Dobrze: 0</div>
+            <div id="counter-remaining" class="counter remaining">Fiszki: 0</div>
+            <div id="counter-bad" class="counter bad">Źle: 0</div>
+        </div>
+    </div>
+
+    <script src="jsy/flashcards.js"></script>
+</body>
+</html>
