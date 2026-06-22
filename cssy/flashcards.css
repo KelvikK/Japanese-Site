@@ -1,0 +1,1106 @@
+/* === RESET I BAZOWE USTAWIENIA === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: 
+        linear-gradient(rgba(224, 224, 224, 0.92), rgba(224, 224, 224, 0.95)), url('../images/SarueiASMR.jpg');
+    
+    /* Centrujemy grafikę i sprawiamy, że pokrywa cały ekran */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Magia paralaksy: tło zostaje zablokowane w miejscu, gdy przewijasz stronę */
+    background-attachment: fixed;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    /* Domyślna wielkość czcionki zostaje bez zmian (zazwyczaj 16px), 
+       będziemy nadpisywać ją w przyszłości tylko tam, gdzie to konieczne */
+}
+
+/* === WSPÓLNY KONTENER NA PASKI === */
+.top-bar-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Podnosimy baner górny i szary pasek nad warstwę blura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === GÓRNY BANER (HEADER) === */
+header {
+    background: linear-gradient(135deg, #000033 0%, #004080 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #000000;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* === CIENKI SZARY PASEK (Z NAWIGACJĄ) === */
+.sub-bar {
+    background-color: #999999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-bar nav {
+    display: flex;
+    gap: 15px; 
+}
+
+.sub-bar a {
+    color: #1a1a1a; 
+    text-decoration: none; 
+    font-size: 0.8rem; 
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 16px; 
+    transition: background-color 0.2s, color 0.2s; 
+}
+
+.sub-bar a:hover {
+    background-color: #000033; 
+    color: #ffffff; 
+}
+
+/* === KONTENER NA TREŚĆ (FORMAT PAPIERU) === */
+.document-container {
+    max-width: 750px; /* Zmiana z 900px na 750px */
+    margin: 40px auto;
+    background-color: #fdfdfd; 
+    padding: 40px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    min-height: 600px; 
+}
+
+.document-container p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* === TYTUŁ ZAKŁADKI I KRESKA === */
+.page-title-container {
+    max-width: 750px; /* Zmiana z 900px na 750px */
+    margin: 30px auto 10px auto; 
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.page-title-container h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.title-line {
+    flex-grow: 1; /* To sprawia, że kreska zajmuje całą resztę wolnego miejsca w kontenerze 900px */
+    height: 1px; /* Grubość 1 piksel */
+    background-color: #677677; /* Ciemnoszary kolor kreski */
+}
+
+/* === PASEK KLASYFIKACJI WIEKOWEJ / OSTRZEŻEŃ === */
+.rating-bar {
+    max-width: 750px;
+    margin: 20px auto 30px auto; /* Odstępy: 10px od tytułu na górze, 30px od kartki na dole */
+    display: flex;
+    align-items: flex-start; /* Zapewnia, że linia i środek przylegają do siebie idealnie od góry */
+    /* Domyślny kolor awaryjny */
+    --rating-color: #666666; 
+}
+
+/* Klasy tematyczne - to one sterują kolorem całego paska! */
+.rating-bar.theme-green { --rating-color: #277a1f; } /* Zielone - OK */
+.rating-bar.theme-blue { --rating-color: #174b85; }  /* Niebieskie - 16+ */
+.rating-bar.theme-red { --rating-color: #5c0000; }   /* Czerwone - 18+ (jak na screenie) */
+.rating-bar.theme-violet { --rating-color: #3d054d; }   /* Czerwone - 18+ (jak na screenie) */
+
+.rating-line {
+    flex-grow: 1; /* Sprawia, że linie rozciągają się po bokach */
+    height: 6px;  /* Grubość linii - dopasowana do screena */
+    background-color: var(--rating-color);
+}
+
+.rating-badge {
+    background-color: var(--rating-color);
+    color: #ffffff;
+    height: 24px;
+    min-width: 140px; /* Szerokość środkowego elementu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', serif; /* Szeryfowa czcionka, żeby 'i' wyglądało jak na dokumentach */
+    font-weight: bold;
+    font-size: 16px;
+    /* To ta linijka tworzy charakterystyczne, ścięte boki (trapez) */
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+}
+
+/* === AUTOMATYCZNA TREŚĆ ZNACZKA (ZAMIAST HTML) === */
+/* Domyślnie (np. dla zielonego i niebieskiego) wstawia literę 'i' */
+/*.rating-badge::after {
+    content: "i";
+}
+
+ Jeśli pasek ma klasę theme-red, wstaw 1 emotkę
+.rating-bar.theme-red .rating-badge::after {
+    content: "🔞";
+    font-size: 18px;  Emotikony potrafią być duże, lekko je zmniejszamy 
+}
+
+ Jeśli pasek ma klasę theme-violet, wstaw 3 emotki
+.rating-bar.theme-violet .rating-badge::after {
+    content: "🔞i🔞";
+    font-size: 18px;
+    letter-spacing: 2px; Lekki odstęp, żeby emotki się nie zlewały 
+}*/
+
+/* Teraz badge tylko przejmuje kolor, nie narzuca tekstu */
+.rating-badge {
+    background-color: var(--rating-color);
+    color: #ffffff;
+    height: 24px;
+    min-width: 140px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 18px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+}
+
+/* === STYL DLA TEKSTU BEZ KARTKI === */
+.text-content {
+    max-width: 750px;
+    margin: 20px auto; /* Wyśrodkowanie i odstęp od paska ostrzeżeń */
+    padding: 0 10px;   /* Lekki margines wewnętrzny, żeby tekst nie dotykał krawędzi na telefonach */
+}
+
+.text-content p {
+    line-height: 1.6;       /* Odstęp między linijkami wewnątrz jednego akapitu */
+    margin-bottom: 25px;    /* Zwiększony odstęp oddzielający od siebie kolejne akapity */
+    color: #1a1a1a;
+}
+
+/* Nowa reguła: usuwa dolny margines z ostatniego akapitu w danym bloku */
+.text-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* === WSTAWKI DOKUMENTÓW (KARTKI W TEKŚCIE) === */
+.paper-block {
+    background-color: #cecece; 
+    padding: 30px 40px; /* Marginesy wewnętrzne kartki (góra/dół 30px, boki 40px) */
+    border: 1px solid #b3b3b3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 25px 8px 25px 24px; /* Automatyczny odstęp 25px nad i pod kartką, dopasowany do akapitów */
+}
+
+.paper-block.paper-watermark {
+    position: relative;
+    z-index: 1; /* Gwarantuje, że cała kartka tworzy osobną warstwę */
+}
+
+/* Tworzymy niewidzialną warstwę pod tekstem, która utrzyma grafikę */
+.paper-block.paper-watermark::before {
+    content: "";
+    display: block; /* Wymuszamy, żeby przeglądarka traktowała to jako fizyczny blok */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: var(--watermark-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    opacity: 0.15; /* Zostawiamy Twoje testowe 0.5 */
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.paper-block p:last-child {
+    margin-bottom: 0;
+}
+
+.paper-block hr {
+    border: none;
+    border-top: 1px solid #999999;
+    margin: 25px 0;
+    width: 100%;
+}
+
+.text-red { color: #5c0000; } /* Czerwony (jak 18+) */
+.text-blue { color: #174b85; } /* Niebieski (jak 16+) */
+.text-green { color: #277a1f; } /* Zielony (jak OK) */
+.text-violet { color: #3d054d; } /* Fioletowy (jak brutalność) */
+.text-yellow { color: #b2bd0f; } /* Żółty (jak czas) */
+.text-orange { color: #ff8800; } /* Pomarańczowy (jak postacie) */
+.text-gray { color: #b3b3b3; } /* Szary (jak normalny tag) */
+.text-pink { color: #D14C74; } /* Jasny Fiolet (jak vtuber(pop culture character) lub easter egg tag) */
+.text-cyan { color: #56e6e6; } /* Cyjanowy (jak kraje) */
+
+.censored {
+    background-color: #000000;
+    color: #000000;
+}
+
+.wiki-image-box {
+    max-width: 100%;
+    margin: 25px auto;
+    display: block;
+    text-align: center;
+}
+
+.wiki-image-box img, 
+.wiki-image-box video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #b3b3b3;
+    border-bottom: none; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
+    position: relative;
+    z-index: 1;
+}
+
+.wiki-image-box figcaption {
+    background-color: #eaeaea;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.wiki-image-box:not(.float-right) img:hover,
+.wiki-image-box:not(.float-right) video:hover {
+    transform: scale(1.2);
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.wiki-image-box.float-right {
+    float: right;
+    margin: 5px 0 15px 20px;
+    max-width: 300px;
+}
+
+.wiki-image-box.float-right img:hover,
+.wiki-image-box.float-right video:hover {
+    transform: scale(1.7);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.text-content::after, .paper-block::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.blur-reveal {
+    filter: blur(15px) brightness(0.8);
+    cursor: pointer !important;
+    transition: filter 0.5s ease;
+}
+
+.wiki-image-box:not(.float-right):hover img.blur-reveal,
+.wiki-image-box:not(.float-right):hover video.blur-reveal,
+.wiki-image-box.float-right:hover img.blur-reveal,
+.wiki-image-box.float-right:hover video.blur-reveal {
+    transform: scale(1) !important;
+    box-shadow: none !important;
+    z-index: 1 !important;
+}
+
+.propositions-block {
+    background-color: #d2d2d2; 
+    padding: 30px 40px; 
+    border: 1px solid #b3b3b3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    margin: 40px 8px 25px 24px; 
+
+    border-left: 8px solid #51005c; 
+
+    position: relative; 
+}
+
+.propositions-block::before {
+    content: "Propozycje";
+    position: absolute;
+    top: -24px;
+    left: -8px;
+    background-color: #51005c;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 3px 12px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.propositions-block p {
+    margin-bottom: 15px;
+}
+
+.propositions-block p:last-child {
+    margin-bottom: 0;
+}
+
+.wiki-page-nav {
+    max-width: 750px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Aptos', sans-serif;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+.wiki-nav-link {
+    color: #51005c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wiki-nav-link:hover {
+    text-decoration: underline;
+}
+
+.wiki-nav-current {
+    font-weight: bold;
+    color: #000000;
+}
+
+.tags-block {
+    max-width: 750px;
+    margin: 40px auto 20px auto;
+    padding-top: 15px;
+    border-top: 1px solid #51005c;
+    position: relative;
+    font-family: 'Aptos', sans-serif;
+}
+
+.tags-block::before {
+    content: "TAGS⮯";
+    position: absolute;
+    top: -21px;
+    left: 0;
+    background-color: #51005c;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+}
+
+.tags-list {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+.tags-list span:not(.tag-separator) {
+    font-weight: bold;
+}
+
+.tag-separator {
+    color: #b3b3b3;
+    margin: 0 4px;
+    font-weight: normal;
+}
+
+.wiki-image-box figcaption {
+    padding-right: 110px; 
+}
+
+.download-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    background-color: #51005c;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid #39063f;
+    
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #ffffff;
+    color: #51005c;
+    border-color: #51005c;
+}
+
+.download-btn.blur-reveal {
+    filter: none;
+}
+
+.legend-sidebar {
+    position: fixed;
+    top: 140px;
+    right: 20px;
+    width: 270px;
+
+    background-color: #cecece; 
+    border: 1px solid #b3b3b3;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+    font-size: 13px;
+    z-index: 999;
+}
+
+.legend-sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #b3b3b3;
+    padding-bottom: 5px;
+}
+
+.legend-sidebar p {
+    margin-bottom: 10px;
+}
+
+.navbar-sidebar {
+    position: fixed;
+    top: 140px;
+    left: 20px;
+    width: 270px;
+    
+    background-color: #cecece; 
+    border: 1px solid #b3b3b3;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+    font-size: 13px;
+    z-index: 1001;
+
+    max-height: 750px;
+    overflow-y: auto;                
+    overflow-x: hidden;               
+
+    direction: rtl;
+}
+
+.navbar-sidebar * {
+    direction: ltr;
+}
+
+.navbar-sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #b3b3b3;
+    padding-bottom: 5px;
+}
+
+.navbar-sidebar p {
+    margin-bottom: 10px;
+}
+
+.navbar-sidebar h3 {
+    --title-color: #7c3131;
+    --title-bg: #ede6e6;
+
+    background-color: var(--title-bg); 
+    border-left: 4px solid var(--title-color); 
+    color: var(--title-color); 
+
+    padding: 6px 12px;
+    margin: 15px 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+}
+
+.navbar-sidebar a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.navbar-sidebar a:visited,
+.navbar-sidebar a:active,
+.navbar-sidebar a:focus {
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar-sidebar a:hover {
+    text-decoration: none;  
+    --title-color: #7c3131;
+    color: var(--title-color); 
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #cecece;
+    border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #000033 0%, #004080 100%);
+    border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #00004d 0%, #0059b3 100%);
+}
+
+.navbar-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.navbar-sidebar::-webkit-scrollbar-track {
+    background: #cecece;
+    border-radius: 0px;
+}
+
+.navbar-sidebar::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #000033 0%, #004080 100%);
+    border-radius: 0px;
+}
+
+.navbar-sidebar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #00004d 0%, #0059b3 100%);
+}
+
+.wiki-audio-box {
+    margin: 20px 0;
+    text-align: left;
+    display: block;
+}
+
+.wiki-audio-box audio {
+    width: 100%;
+    max-width: 450px;
+    height: 40px;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.wiki-audio-box figcaption {
+    text-align: left;
+    font-size: 13px;
+    font-style: italic;
+    color: #333;
+}
+
+.wiki-audio-box figcaption .download-btn {
+    position: static;
+    display: inline-block;
+    margin-left: 15px;
+    font-style: normal;
+    transform: none;
+    vertical-align: middle;
+}
+
+.age-gate-wrapper {
+    display: none;
+}
+
+.age-gate-wrapper.active {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 240px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    backdrop-filter: blur(12px); 
+    background-color: rgba(0, 0, 0, 0.15);
+    
+    z-index: 500;
+}
+
+.age-gate-btn {
+    background-color: #7c3131;
+    color: #ffffff;
+    border: 2px solid #51005c;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.age-gate-btn:hover {
+    background-color: #943a3a;
+    transform: scale(1.02);
+}
+
+.search-middlebar {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;    
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    background-color: #ffffff;
+    border: 1px solid #b3b3b3;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-icon {
+    padding: 0 12px;
+    font-size: 16px;
+    user-select: none;
+    cursor: default;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;            
+    background: transparent;
+    padding: 12px 10px 12px 0;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 14px;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.search-input:empty:before {
+    content: "Wprowadź Nazwa/ID/Tag aby przeszukiwać...";
+    color: #888888;
+    font-style: italic;
+    cursor: text;
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #000033 0%, #004080 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.2s;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #00004d 0%, #0059b3 100%);
+}
+
+.search-result-link {
+    display: block;
+    color: #51005c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #f5edf7;
+    border-left: 4px solid #51005c;
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.search-result-link:hover {
+    background-color: #ebdff0;
+    padding-left: 20px;
+}
+
+.search-result-link.error-link {
+    color: #8b0000;
+    background-color: #fdeaea;
+    border-left: 4px solid #8b0000;
+}
+
+.search-result-link.error-link:hover {
+    background-color: #f9d5d5;
+}
+
+.search-result-header {
+    margin-top: 0;
+    padding-bottom: 10px;
+    color: #333333;
+}
+
+.search-result-link {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    color: var(--dynamic-main);
+    background-color: var(--dynamic-sub);
+    border-left: 4px solid var(--dynamic-main);
+    
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.search-result-link:hover {
+    padding-left: 20px;
+    filter: brightness(0.95); 
+}
+
+.search-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #b3b3b3;
+    border-top: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none;
+    max-height: 258px;
+    overflow-y: auto;
+}
+
+.autocomplete-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: 'Aptos', sans-serif;
+    cursor: pointer;
+    border-bottom: 1px dotted #e0e0e0;
+    transition: background-color 0.15s;
+    display: flex;
+    align-items: center;
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-item:hover {
+    background-color: #f7f7f7;
+}
+
+.autocomplete-prefix {
+    color: #888888;
+    font-weight: normal;
+    margin-right: 2px;
+}
+
+.flashcards-modes-container {
+    max-width: 750px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.flashcards-modes-container button {
+    background: linear-gradient(135deg, #000033 0%, #004080 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.flashcards-modes-container button:hover {
+    background: linear-gradient(135deg, #00004d 0%, #0059b3 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flashcards-modes-container button:active {
+    transform: scale(0.98);
+}
+
+/* === KONTENER NA DŁUGIE GUZIKI KATEGORII === */
+.categories-container {
+    max-width: 750px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column; /* Układ pionowy - jeden pod drugim */
+    gap: 12px;              /* Odstęp między długimi guzikami */
+    padding: 0 10px;
+}
+
+/* === STYL DLA DŁUGICH GUZIKÓW (DOMYŚLNIE WYŁĄCZONE) === */
+.category-toggle-btn {
+    width: 100%;            /* Guzik rozciąga się na pełną szerokość (750px) */
+    background: #eaeaea;    /* Jasnoszare, neutralne tło */
+    color: #333333;
+    border: 1px solid #b3b3b3;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;       /* Tekst wyrównany do lewej */
+    cursor: pointer;
+    font-family: 'Aptos', sans-serif;
+    transition: all 0.2s ease;
+}
+
+/* Hover dla wyłączonego przycisku */
+.category-toggle-btn:hover {
+    background-color: #dfdfdf;
+    padding-left: 25px;     /* Delikatne przesunięcie tekstu w prawo przy najechaniu */
+}
+
+/* === STYL DLA AKTYWOWANEGO GUZIKA (Z DYNAMICZNYM KOLOREM) === */
+.category-toggle-btn.active {
+    /* Używamy zmiennej wstrzykniętej z JS. Jeśli JS jej nie poda, domyślnie da granatowy #000033 */
+    background: var(--chosen-color, #000033); 
+    color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
+    padding-left: 30px;
+}
+
+/* Hover dla aktywnego przycisku (rozjaśnia ten kolor, który aktualnie tam jest) */
+.category-toggle-btn.active:hover {
+    filter: brightness(1.15);
+}
+
+/* Klasa pomocnicza do ukrywania sekcji */
+.hidden {
+    display: none !important;
+}
+
+/* Styl tekstu wewnątrz wielkiej fiszki */
+.flashcard-box {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+#flashcard-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* === MODYFIKACJA KONTENERA FISZKI (Żeby liczniki były pod spodem) === */
+.flashcard-card-view {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;   /* Układ pionowy: fiszka na górze, liczniki na dole */
+    gap: 25px;
+    
+    /* PRZYWRÓCENIE TŁA I STYLU KARTKI */
+    background-color: #ffffff; 
+    border-radius: 2px;       /* Jeśli Twoje kontenery mają lekkie zaokrąglenie */
+}
+
+/* Główny duży tekst fiszki */
+#flashcard-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Styl dla małego dodatku opisowego */
+#flashcard-hint {
+    font-size: 16px;
+    color: #666666;
+    font-style: italic;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+/* === STYL DLA ZABLOKOWANEGO PRZYCISKU TRYBU === */
+.flashcards-modes-container button:disabled {
+    background: #cccccc;       /* Szare, nieaktywne tło */
+    color: #888888;          /* Wyblakły tekst */
+    cursor: not-allowed;     /* Zmiana kursora myszy na znak zakazu */
+    box-shadow: none;        /* Usunięcie cienia */
+    transform: none !important; /* Brak efektu kliknięcia */
+}
+
+/* === SEKCJA MASOWEGO WYBORU (GRUPY) === */
+.bulk-selection-section {
+    max-width: 750px;
+    margin: 20px auto 5px auto;
+    padding: 0 10px;
+    font-family: 'Aptos', sans-serif;
+}
+
+/* Styl dla podpisu "Zaznacz wszystkie:" */
+.bulk-title {
+    font-size: 13px;
+    color: #666666;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Kontener na przyciski grup (obok siebie) */
+.groups-buttons-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* W razie dodania wielu części, przejdą do nowej linii */
+}
+
+/* Styl przycisków grup (np. Część 1) */
+.group-select-btn {
+    background-color: #999999; /* Szary, spójny z Twoim .sub-bar */
+    color: #ffffff;
+    border: 1px solid #777777;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Aptos', sans-serif;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Efekt najechana na przycisk grupy */
+.group-select-btn:hover {
+    background-color: #000033; /* Zmiana na granat z Twojego nagłówka */
+    color: #ffffff;
+}
+
+.flashcard-counters {
+    display: flex;
+    justify-content: center;  /* Zbijamy wszystkie liczniki do środka ekranu */
+    align-items: center;
+    gap: 30px;                /* Odstęp między licznikami obok siebie */
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+    font-family: 'Aptos', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Wspólny styl dla każdego pojedynczego licznika */
+.counter {
+    padding: 4px 5px;
+    white-space: nowrap;      /* Zabezpieczenie przed łamaniem tekstu do nowej linii */
+}
+
+/* Licznik Dobrze - zielony */
+.counter.good {
+    color: #277a1f;
+}
+
+/* Licznik Pozostałe - szarawy */
+.counter.remaining {
+    color: #777777;
+}
+
+/* Licznik Źle - czerwony */
+.counter.bad {
+    color: #b30000;
+}
+
+/* Subtelny efekt uniesienia przy najechaniu myszką */
+.flashcard-box:hover {
+    transform: scale(1.02);
+}
+
+/* Kiedy wyświetla się odpowiedź, zmieniamy domyślny kursor */
+.flashcard-box.flipped {
+    cursor: default; /* Skoro kliknięcie już nic nie robi */
+}
+
+/* Tworzymy dynamiczną warstwę podświetlenia */
+.flashcard-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transition: opacity 0.2s ease;
+    pointer-events: none; /* Żeby warstwa nie blokowała zdarzeń myszy */
+    opacity: 0;
+    z-index: 0; /* Pod tekstem */
+}
+
+/* Podświetlenie LEWEJ strony (Zielone) */
+.flashcard-box.flipped.hover-left::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(21, 255, 0, 1), rgba(39, 122, 31, 0.02));
+    opacity: 1;
+}
+
+/* Podświetlenie PRAWEJ strony (Czerwone) */
+.flashcard-box.flipped.hover-right::before {
+    right: 0;
+    background: linear-gradient(to left, rgb(255, 0, 0, 1), rgba(179, 0, 0, 0.02));
+    opacity: 1;
+}
+
+/* Upewniamy się, że teksty są nad warstwą podświetlenia */
+#flashcard-text, #flashcard-hint {
+    position: relative;
+    z-index: 1;
+}
