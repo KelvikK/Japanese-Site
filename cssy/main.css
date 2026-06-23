@@ -835,3 +835,9 @@ body::-webkit-scrollbar-thumb:hover {
     font-weight: normal;
     margin-right: 2px;
 }
+
+rt {
+    font-size: 10px;
+    padding-bottom: 5px;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

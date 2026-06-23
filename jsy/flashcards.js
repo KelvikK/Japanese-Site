@@ -159,16 +159,34 @@ const flashcardsDatabase = [
         name: "Gimonshi 疑問詞",
         activeColor: "#00973f",
         cards: [
-            { q: "Nani/Nan ", a: "Co?", hint: "" },
-            { q: "Dare ", a: "Kto?", hint: "" },
-            { q: "Doko ", a: "Gdzie?", hint: "" },
-            { q: "itsu ", a: "Kiedy?", hint: "" },
-            { q: "Dou ", a: "Jak?", hint: "" },
-            { q: "Nande/Naze/Doshite ", a: "Dlaczego?", hint: "" },
-            { q: "Ikutsu ", a: "Ile?", hint: "" },
-            { q: "Ikura ", a: "Ile?", hint: "Specyficznie dla ceny." },
-            { q: "Dore ", a: "Który?", hint: "" },
-            { q: "Donna ", a: "Jaki?", hint: "" },
+            { q: "Nani/Nan なに/な", a: "Co?", hint: "" },
+            { q: "Dare だれ", a: "Kto?", hint: "" },
+            { q: "Doko どこ", a: "Gdzie?", hint: "" },
+            { q: "Itsu いつ", a: "Kiedy?", hint: "" },
+            { q: "Dou どう", a: "Jak?", hint: "" },
+            { q: "Nande/Naze/Doshite なんで/なぜ/どして", a: "Dlaczego?", hint: "" },
+            { q: "Ikutsu いくつ", a: "Ile?", hint: "" },
+            { q: "Ikura いくら", a: "Ile?", hint: "Specyficznie dla ceny." },
+            { q: "Dore どれ", a: "Jaki?/Który?", hint: "Dla przedmiotów." },
+            { q: "Donna どんな", a: "Który?/Jaki?", hint: "Dla Ludzi." },
+        ]
+    },
+    {
+        id: "doushi1",
+        name: "Dōshi 動詞 0-100",
+        activeColor: "#ff1212",
+        cards: [
+            { q: "Desu です", a: "Być", hint: "Czasownik ten ma wiele zastosowań. Więcej niż tylko 'być'." }
+        ]
+    },
+    {
+        id: "particles",
+        name: "Particles",
+        activeColor: "#464646",
+        cards: [
+            { q: "WA は", a: "Partykuła Tematu", hint: "Używana aby precyzować co jest tematem rozmowy." },
+            { q: "KA か", a: "Partykuła Pytająca", hint: "Używana aby zmieniać zdanie w pytanie." },
+            { q: "NO の", a: "Partykuła Przynależności", hint: "Używana aby zdefiniować czye coś jest lub stworzyć nowe słowa." },
         ]
     },
     {
@@ -216,6 +234,26 @@ const flashcardsDatabase = [
         ]
     },
     {
+        id: "suuji",
+        name: "Suuji すうじ",
+        activeColor: "#ffa600",
+        cards: [
+            { q: "Zero/Rei ゼロ/零", a: "0", hint: "" },
+            { q: "Ichi 一", a: "1", hint: "" },
+            { q: "Ni 二", a: "2", hint: "" },
+            { q: "San 三", a: "3", hint: "" },
+            { q: "Shi/Yon 四", a: "4", hint: "" },
+            { q: "Go 五", a: "5", hint: "" },
+            { q: "Roku 六", a: "6", hint: "" },
+            { q: "Nana/Shichi 七", a: "7", hint: "" },
+            { q: "Hachi 八", a: "8", hint: "" },
+            { q: "Kyuu 九", a: "9", hint: "" },
+            { q: "Juu 十", a: "10", hint: "" },
+            { q: "Hyaku 百", a: "100", hint: "" },
+            { q: "~ban ～ばん", a: "...numer", hint: "" },
+        ]
+    },
+    {
         id: "gakkou",
         name: "Gakkou がっこう",
         activeColor: "#3eafdb",
@@ -242,7 +280,7 @@ const flashcardsDatabase = [
             { q: "Taiiku たいいく", a: "WF", hint: "" },
             { q: "Ongaku おんがく", a: "Muzyka", hint: "" },
             { q: "Bijutsu びじゅつ", a: "Plastyka", hint: "" },
-            { q: "Joohoo じょうほう", a: "Informatyka", hint: "" },
+            { q: "Konpyuuta コンピューター", a: "Informatyka", hint: "" },
             { q: "Butsuri ぶつり", a: "Fizyka", hint: "" },
             { q: "Seibutsu せいぶつ", a: "Biologia", hint: "" },
             { q: "Chiri ちり", a: "Geografia", hint: "" },
@@ -252,6 +290,7 @@ const flashcardsDatabase = [
             { q: "Rekishi れきし", a: "Historia", hint: "" },
             { q: "Bungaku ぶんがく", a: "Literatura", hint: "" },
             { q: "Bijinesu ビジネス", a: "Biznes", hint: "Szkolny Przedmiot" },
+            { q: "Hon ほん", a: "Książka", hint: "" }
         ]
     },
     {
@@ -259,7 +298,7 @@ const flashcardsDatabase = [
         name: "Shigoto しごと",
         activeColor: "#3eafdb",
         cards: [
-            { q: "shigoto しごと", a: "Praca", hint: "Jako profesja, miejsce pracy, angielskie 'Occupation'." },
+            { q: "Shigoto しごと", a: "Praca", hint: "Jako profesja, miejsce pracy, angielskie 'Occupation'." },
             { q: "Isha いしゃ", a: "Doktor", hint: "" },
             { q: "Haisha はいしゃ", a: "Dentysta", hint: "" },
             { q: "Kaishain かいしゃいん", a: "Pracownik Biura", hint: "" },
@@ -285,17 +324,25 @@ const flashcardsDatabase = [
             { q: "Oneesan おねえさん", a: "Starsza Siostra", hint: "Ogólnie. Cudza Starsza Siostra." },
             { q: "Oniisan おにいさん", a: "Starszy Brat", hint: "Ogólnie. Cudzy Starszy Brat." }
         ]
+    },
+    {
+        id: "resutoran",
+        name: "Resutoran れすとらん",
+        activeColor: "#f25dff",
+        cards: [
+            { q: "Kazoku かぞく", a: "Rodzina", hint: "" }
+        ]
     }
 ];
 
 const groupsDatabase = [
     {
         label: "Strona 1",
-        categoryIds: ["hiragana", "katakana", "aisatsu", "kuni", "jikan", 'gakkou', 'shigoto', 'kazoku', 'daimeishi', 'gimonshi']
+        categoryIds: ["hiragana", "katakana", "aisatsu", "kuni", "jikan", 'gakkou', 'shigoto', 'kazoku', 'daimeishi', 'gimonshi', 'doushi1', 'particles']
     },
     {
         label: "Strona 2",
-        categoryIds: [""]
+        categoryIds: ["suuji", "resutoran"]
     }
 ];
 
@@ -305,7 +352,7 @@ let currentCard = null;
 let isFlipped = false;   
 let currentMouseSide = ""; 
 let goodCount = 0;         
-let badCount = 0; // NOWOŚĆ: Licznik błędów
+let badCount = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     const categoriesContainer = document.getElementById("categories-selection-container");
@@ -320,9 +367,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const counterGoodEl = document.getElementById("counter-good");
     const counterRemainingEl = document.getElementById("counter-remaining");
-    const counterBadEl = document.getElementById("counter-bad"); // NOWOŚĆ: Pobieramy element "Źle"
+    const counterBadEl = document.getElementById("counter-bad");
 
-    // === GENEROWANIE KATEGORII I GRUP ===
+    
     function renderCategories() {
         categoriesContainer.innerHTML = "";
         flashcardsDatabase.forEach(category => {
@@ -381,9 +428,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderCategories();
 
-    // === LOGIKA FISZEK ===
+    
 
-    // Funkcja: Wylosuj następną fiszkę lub zakończ
+    
     function wylosujNastepnaFiszke() {
         if (poolOfCards.length === 0) {
             categoriesBtn.click();
@@ -403,7 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
         counterRemainingEl.innerText = `Fiszki: ${poolOfCards.length}`;
     }
 
-    // Start praktyki
+    
     practiceBtn.addEventListener("click", () => {
         if (activeCategories.length === 0) {
             alert("Najpierw musisz wybrać przynajmniej jedną kategorię!");
@@ -412,11 +459,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         practiceBtn.disabled = true;
         
-        // Reset liczników na start
+        
         goodCount = 0;
         badCount = 0;
         if(counterGoodEl) counterGoodEl.innerText = `Dobrze: ${goodCount}`;
-        if(counterBadEl) counterBadEl.innerText = `Źle: ${badCount}`; // NOWOŚĆ: Reset licznika "Źle"
+        if(counterBadEl) counterBadEl.innerText = `Źle: ${badCount}`; 
 
         poolOfCards = [];
         flashcardsDatabase.forEach(category => {
@@ -432,35 +479,35 @@ document.addEventListener("DOMContentLoaded", () => {
         wylosujNastepnaFiszke();
     });
 
-    // Kliknięcie w fiszkę
+    
     flashcardBox.addEventListener("click", () => {
         if (!currentCard) return; 
 
         if (!isFlipped) {
-            // Pokaż odpowiedź
+            
             flashcardText.innerText = currentCard.a; 
             flashcardHint.innerText = currentCard.hint || "";
             isFlipped = true;
             flashcardBox.classList.add("flipped");
         } else {
-            // Ocenianie
+            
             if (currentMouseSide === "left") {
-                // DOBRZE
+                
                 poolOfCards = poolOfCards.filter(card => card !== currentCard);
                 goodCount++;
                 if(counterGoodEl) counterGoodEl.innerText = `Dobrze: ${goodCount}`;
                 wylosujNastepnaFiszke();
             } else if (currentMouseSide === "right") {
-                // ŹLE (NOWOŚĆ)
+                
                 badCount++;
                 if(counterBadEl) counterBadEl.innerText = `Źle: ${badCount}`;
-                // Losujemy kolejną bez usuwania obecnej z poolOfCards
+                
                 wylosujNastepnaFiszke();
             }
         }
     });
 
-    // Kolorowanie myszką
+    
     flashcardBox.addEventListener("mousemove", (e) => {
         if (!isFlipped) return; 
 
@@ -484,7 +531,6 @@ document.addEventListener("DOMContentLoaded", () => {
         currentMouseSide = "";
     });
 
-    // Powrót do menu
     categoriesBtn.addEventListener("click", () => {
         practiceContainer.classList.add("hidden");
         categoriesContainer.classList.remove("hidden");

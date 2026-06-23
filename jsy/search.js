@@ -32,11 +32,29 @@ const database = [
     { name: 'Gimonshi', id: '00000014', url: 'JAP/jap_questions.html', theme: '#00973f', theme_sub: '#b2e6c8', 
         tags: ['słowa_pytające']
     },
+    { name: 'Desu', id: '00000015', url: 'JAP/jap_desu.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
+        tags: ['gramatyka', 'desu']
+    },
+    { name: 'Godzina', id: '00000020', url: 'JAP/jap_jisaifun.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
+        tags: ['gramatyka', 'numery', 'czas', 'sufiksy', 'słownictwo']
+    },
+    { name: 'WA', id: '00000016', url: 'JAP/jap_particlesWA.html', theme: '#3300CC', theme_sub: '#a8a1bd', 
+        tags: ['partykuły', 'wa']
+    },
+    { name: 'KA', id: '00000017', url: 'JAP/jap_particlesKA.html', theme: '#55006e', theme_sub: '#897a8d', 
+        tags: ['partykuły', 'ka']
+    },
+    { name: 'NO', id: '00000018', url: 'JAP/jap_particlesNO.html', theme: '#6fffe0', theme_sub: '#f4fffd', 
+        tags: ['partykuły', 'no']
+    },
     { name: 'Jikan Tango', id: '00000006', url: 'JAP/jap_timeVocabulary.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
         tags: ['słownictwo', 'czas']
     },
     { name: 'Jikan Setsubiji', id: '00000007', url: 'JAP/jap_timeSufix.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
         tags: ['słownictwo', 'czas', 'sufiksy']
+    },
+    { name: 'Numery 0-100', id: '00000019', url: 'JAP/jap_numbers100.html', theme: '#ffa600', theme_sub: '#ffedcb', 
+        tags: ['numery']
     },
     { name: 'Kuni Tango', id: '00000008', url: 'JAP/jap_countryVocabulary.html', theme: '#74e249', theme_sub: '#d1e7c8', 
         tags: ['słownictwo', 'kraj']
@@ -52,6 +70,9 @@ const database = [
     },
     { name: 'Kazoku', id: '00000012', url: 'JAP/jap_familyVocabulary.html', theme: '#3eafdb', theme_sub: '#a9c7d3', 
         tags: ['słownictwo', 'rodzina']
+    },
+    { name: 'Restauracja', id: '00000021', url: 'JAP/jap_restaurantVocabulary.html', theme: '#f25dff', theme_sub: '#fef0ff', 
+        tags: ['słownictwo', 'restauracja']
     }
 ]
 
@@ -69,17 +90,25 @@ const tagColors = {
     'kaiwa': { color: '#00973f' },
     'zaimki': { color: '#00973f' },
     'słowa_pytające': { color: '#00973f' },
+    'gramatyka': { color: '#ff1212' },
+    'desu': { color: '#ff1212' },
+    'partykuły': { color: '#464646' },
+    'wa': { color: '#3300CC' },
+    'ka': { color: '#55006e' },
+    'no': { color: '#6fffe0' },
     'słownictwo': { color: '#d6d300' },
     'czas': { color: '#d6d300' },
     'sufiksy': { color: '#d6d300' },
+    'numery': { color: '#ffa600' },
     'kraj': { color: '#74e249' },
     'język': { color: '#74e249' },
     'szkoła': { color: '#3eafdb' },
     'praca': { color: '#3eafdb' },
-    'rodzina': { color: '#3eafdb' }
+    'rodzina': { color: '#3eafdb' },
+    'restauracja': { color: '#f25dff' }
 };
 
-//Liczonko Tagów
+//Liczenie Tagów
 function calculateTagCounts() {
     Object.keys(tagColors).forEach(tag => {
         tagColors[tag].count = 0;
