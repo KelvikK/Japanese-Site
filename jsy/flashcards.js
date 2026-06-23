@@ -166,9 +166,7 @@ const flashcardsDatabase = [
             { q: "Dou どう", a: "Jak?", hint: "" },
             { q: "Nande/Naze/Doshite なんで/なぜ/どして", a: "Dlaczego?", hint: "" },
             { q: "Ikutsu いくつ", a: "Ile?", hint: "" },
-            { q: "Ikura いくら", a: "Ile?", hint: "Specyficznie dla ceny." },
-            { q: "Dore どれ", a: "Jaki?/Który?", hint: "Dla przedmiotów." },
-            { q: "Donna どんな", a: "Który?/Jaki?", hint: "Dla Ludzi." },
+            { q: "Ikura いくら", a: "Ile?", hint: "Specyficznie dla ceny." }
         ]
     },
     {
