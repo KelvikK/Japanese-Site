@@ -39,6 +39,7 @@ const sidebarContent = `
     <a href="jap_familyVocabulary.html" style="--title-color: #3eafdb;">Kazoku かぞく</a>
     <h3 style="--title-color: #f25dff; --title-bg: #fef0ff;">Restauracja, Sklep, Miasto</h3>
     <a href="jap_restaurantVocabulary.html" style="--title-color: #f25dff;">Resutoran レストラン</a>
+    <a href="jap_shoppingVocabulary.html" style="--title-color: #f25dff;">Kaimono 買い物</a>
     <hr>
 </aside>
 `;

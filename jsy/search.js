@@ -11,6 +11,9 @@ const database = [
     { name: 'Główna', id: '00000000', url: 'index.html', theme: '#868d98', theme_sub: '#e6ede7', 
         tags: ['główna', 'autor']
     },
+    { name: 'Postacie', id: '00000022', url: 'characters.html', theme: '#868d98', theme_sub: '#e6ede7', 
+        tags: ['postacie', 'autor']
+    },
     { name: 'Hiragana', id: '00000001', url: 'JAP/jap_hiragana.html', theme: '#73dcff', theme_sub: '#ebfaff', 
         tags: ['hiragana', 'dakuten', 'handakuten', 'alfabety']
     },
@@ -73,11 +76,15 @@ const database = [
     },
     { name: 'Restauracja', id: '00000021', url: 'JAP/jap_restaurantVocabulary.html', theme: '#f25dff', theme_sub: '#fef0ff', 
         tags: ['słownictwo', 'restauracja']
+    },
+    { name: 'Sklep', id: '00000023', url: 'JAP/jap_shoppingVocabulary.html', theme: '#f25dff', theme_sub: '#fef0ff', 
+        tags: ['słownictwo', 'sklep']
     }
 ]
 
 const tagColors = {
     'główna': { color: '#b3b3b3' },
+    'postacie': { color: '#b3b3b3' },
     'autor': { color: '#b3b3b3' },
     'alfabety': { color: '#73dcff' },
     'hiragana': { color: '#73dcff' },
@@ -105,7 +112,8 @@ const tagColors = {
     'szkoła': { color: '#3eafdb' },
     'praca': { color: '#3eafdb' },
     'rodzina': { color: '#3eafdb' },
-    'restauracja': { color: '#f25dff' }
+    'restauracja': { color: '#f25dff' },
+    'sklep': { color: '#f25dff' }
 };
 
 //Liczenie Tagów

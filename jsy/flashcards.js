@@ -212,7 +212,8 @@ const flashcardsDatabase = [
             { q: "Girisha ギリシャ", a: "Grecja", hint: "Kraj." },
             { q: "Firipin フィリピン", a: "Filipiny", hint: "Kraj." },
             { q: "~jin", a: "...człowiek", hint: "Używane by tworzyć na przykład narodowości." },
-            { q: "~go", a: "...język", hint: "Używane z nazwą kraju aby stworzyć język danego kraju." }
+            { q: "~go", a: "...język", hint: "Używane z nazwą kraju aby stworzyć język danego kraju." },
+            { q: "Bokokugo 母国語", a: "Ojczysty Język", hint: "Rzeczownik" }
         ]
     },
     {
@@ -302,7 +303,9 @@ const flashcardsDatabase = [
             { q: "Kaishain かいしゃいん", a: "Pracownik Biura", hint: "" },
             { q: "Shufu しゅふ", a: "Gospodyni", hint: "Jest to tłumaczenie z 'Housewife'." },
             { q: "Daigakuinsei だいがくいんせい", a: "Student", hint: "Chodzi o studenta który już graduował." },
-            { q: "Bengoshi べんごし", a: "Prawnik", hint: "" }
+            { q: "Bengoshi べんごし", a: "Prawnik", hint: "" },
+            { q: "Weetaa/Weetoresu ウェーター/ウェートレス", a: "Kelner/ka", hint: "" },
+            { q: "Hoorusutaffu ホールスタッフ", a: "Obsługa Witająca", hint: "" }
         ]
     },
     {
@@ -328,7 +331,34 @@ const flashcardsDatabase = [
         name: "Resutoran れすとらん",
         activeColor: "#f25dff",
         cards: [
-            { q: "Kazoku かぞく", a: "Rodzina", hint: "" }
+            { q: "Resutoran レストラン", a: "Restauracja", hint: "" },
+            { q: "Kyakuseki きゃくせき", a: "Jadalnia/Sala Jadalna", hint: "W restauracjach przeważnie." },
+            { q: "Reji レジ", a: "Kasa/Bar", hint: "Jako miejsce z kasą fiskalną." },
+            { q: "Kauntaa カウンター", a: "Kasa", hint: "Fiskalna." },
+            { q: "Okyaku-sama おきゃくさま", a: "Klient", hint: "" },
+            { q: "Sara さら", a: "Talerz", hint: "Formalnie mówimy 'Osara'." },
+            { q: "Shokki しょっき", a: "Zastawa", hint: "Wszystkie naczynia przygotowane na stole." },
+            { q: "Owan おわん", a: "Miseczka na Ryż lub Zupę", hint: "" },
+            { q: "Ohashi おはし", a: "Pałeczki", hint: "Te którymi jemy." },
+            { q: "Ochoko おちょこ", a: "Kieliszek na Sake", hint: "" },
+            { q: "Okaikei おかいけい", a: "Rachunek", hint: "" },
+            { q: "Menyuu メニュー", a: "Menu", hint: "" },
+            { q: "Torei とれい", a: "Taca", hint: "Do noszenia rzeczy." },
+            { q: "Oshibori おしぼり", a: "Ręcznik", hint: "Specjalny dawany przed posiłkiem." },
+            { q: "Napukin ナプキン", a: "Serwetki", hint: "" },
+            { q: "Kaado Riidaa カードリーダー", a: "Czytnik Kart", hint: "Do płacenia." },
+            { q: "Gohan ごはん", a: "Posiłek", hint: "Ogólnie" },
+            { q: "Asagohan あさごはん", a: "Śniadanie", hint: "" },
+            { q: "Hirugohan ひるごはん", a: "Obiad", hint: "" },
+            { q: "Bangohan ばんごはん", a: "Kolacja", hint: "" }
+        ]
+    },
+    {
+        id: "kaimono",
+        name: "Kaimono 買い物",
+        activeColor: "#f25dff",
+        cards: [
+            { q: "", a: "", hint: "" }
         ]
     }
 ];
@@ -340,7 +370,7 @@ const groupsDatabase = [
     },
     {
         label: "Strona 2",
-        categoryIds: ["suuji", "resutoran"]
+        categoryIds: ["suuji", "resutoran", "kaimono"]
     }
 ];
 
