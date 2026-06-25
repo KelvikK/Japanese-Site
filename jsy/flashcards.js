@@ -178,6 +178,14 @@ const flashcardsDatabase = [
         ]
     },
     {
+        id: "dore",
+        name: "Dore, Dono, Doko どれ、どの、どこ",
+        activeColor: "#ff1212",
+        cards: [
+            { q: "", a: "", hint: "" }
+        ]
+    },
+    {
         id: "particles",
         name: "Particles",
         activeColor: "#464646",
@@ -248,7 +256,9 @@ const flashcardsDatabase = [
             { q: "Hachi 八", a: "8", hint: "" },
             { q: "Kyuu 九", a: "9", hint: "" },
             { q: "Juu 十", a: "10", hint: "" },
-            { q: "Hyaku 百", a: "100", hint: "" },
+            { q: "Hyaku 百", a: "100", hint: "Nie trzeba dopisywać ichi do pojedynczego Hyaku." },
+            { q: "Sen 千", a: "1000", hint: "Nie trzeba dopisywać ichi do pojedynczego Sen." },
+            { q: "Ichiman 一万", a: "10 000", hint: "Trzeba dopisywać ichi do pojedynczego Man!" },
             { q: "~ban ～ばん", a: "...numer", hint: "" },
         ]
     },
@@ -358,7 +368,16 @@ const flashcardsDatabase = [
         name: "Kaimono 買い物",
         activeColor: "#f25dff",
         cards: [
-            { q: "", a: "", hint: "" }
+            { q: "Mise みせ", a: "Sklep", hint: "Ogólnie." },
+            { q: "Suupaa スーパー", a: "Supermarket", hint: "" },
+            { q: "Depaato デパート", a: "Dom Towarowy", hint: "" },
+            { q: "Ten'in てんいん", a: "Pracownik Sklepu", hint: "Formalnie. Pracownik." },
+            { q: "Konbini コンビニ", a: "Kiosk", hint: "Angielskie 'Convinient Store'." },
+            { q: "Hanbai-in はんばいいん", a: "Sprzedawca", hint: "Osoba obsługująca kasę. Kasjer." },
+            { q: "[Sklep] no Hito 「みせ」の人", a: "Osoba pracująca w danym sklepie", hint: "Można też mówić 'no ten'in'. Nigdy nie mówić 'Mise no ten'in'." },
+            { q: "~en　円", a: "Yen", hint: "Japońska Waluta. Lubię mówić na polską walutę ~kin czyli dosłownie złoto." },
+            { q: "Saifu さいふ", a: "Portfel", hint: "" },
+            { q: "Tokei とけい", a: "Zegar", hint: "Zegarek na ręke także." }
         ]
     }
 ];
@@ -370,7 +389,7 @@ const groupsDatabase = [
     },
     {
         label: "Strona 2",
-        categoryIds: ["suuji", "resutoran", "kaimono"]
+        categoryIds: ["suuji", "resutoran", "kaimono", "dore"]
     }
 ];
 

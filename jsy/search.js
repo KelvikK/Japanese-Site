@@ -41,6 +41,9 @@ const database = [
     { name: 'Godzina', id: '00000020', url: 'JAP/jap_jisaifun.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
         tags: ['gramatyka', 'numery', 'czas', 'sufiksy', 'słownictwo']
     },
+    { name: 'Wskazywanie', id: '00000025', url: 'JAP/jap_pointing.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
+        tags: ['gramatyka', 'wskazywanie', 'słownictwo']
+    },
     { name: 'WA', id: '00000016', url: 'JAP/jap_particlesWA.html', theme: '#3300CC', theme_sub: '#a8a1bd', 
         tags: ['partykuły', 'wa']
     },
@@ -57,6 +60,9 @@ const database = [
         tags: ['słownictwo', 'czas', 'sufiksy']
     },
     { name: 'Numery 0-100', id: '00000019', url: 'JAP/jap_numbers100.html', theme: '#ffa600', theme_sub: '#ffedcb', 
+        tags: ['numery']
+    },
+    { name: 'Liczenie', id: '00000024', url: 'JAP/jap_numbers.html', theme: '#ffa600', theme_sub: '#ffedcb', 
         tags: ['numery']
     },
     { name: 'Kuni Tango', id: '00000008', url: 'JAP/jap_countryVocabulary.html', theme: '#74e249', theme_sub: '#d1e7c8', 
@@ -99,6 +105,7 @@ const tagColors = {
     'słowa_pytające': { color: '#00973f' },
     'gramatyka': { color: '#ff1212' },
     'desu': { color: '#ff1212' },
+    'wskazywanie': { color: '#ff1212' },
     'partykuły': { color: '#464646' },
     'wa': { color: '#3300CC' },
     'ka': { color: '#55006e' },

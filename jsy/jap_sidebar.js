@@ -13,14 +13,15 @@ const sidebarContent = `
     <a href="jap_hiragana.html" style="--title-color: #73dcff;">Hiragana ひらがな</a>
     <a href="jap_katakana.html" style="--title-color: #73dcff;">Katakana カタカナ</a>
     <a href="jap_kanji.html" style="--title-color: #73dcff;">Kanji 漢字</a>
-    <h3 style="--title-color: #00973f; --title-bg: #b2e6c8;">Podstawy</h3>
+    <h3 style="--title-color: #00973f; --title-bg: #b2e6c8;">Podstawy JLPTN5</h3>
     <a href="jap_greetings.html" style="--title-color: #00973f;">Aisatsu あいさつ</a>
     <a href="jap_dialog1.html" style="--title-color: #00973f;">Kaiwa かいわ</a>
     <a href="jap_pronouns.html" style="--title-color: #00973f;">Daimeishi 代名詞</a>
     <a href="jap_questions.html" style="--title-color: #00973f;">Gimonshi 疑問詞</a>
-    <h3 style="--title-color: #ff1212; --title-bg: #ffc8c8;">Gramatyka</h3>
+    <h3 style="--title-color: #ff1212; --title-bg: #ffc8c8;">Gramatyka JLPTN5</h3>
     <a href="jap_desu.html" style="--title-color: #ff1212;">Desu です</a>
     <a href="jap_jisaifun.html" style="--title-color: #ff1212;">Jikan じかん / Toshi とし</a>
+    <a href="jap_pointing.html" style="--title-color: #ff1212;">Dore, Sono, Doko どれ、どの、どこ</a>
     <h3 style="--title-color: #464646; --title-bg: #e0e0e0;">Partykuły</h3>
     <a href="jap_particlesWA.html" style="--title-color: #3300CC;">WA は</a>
     <a href="jap_particlesKA.html" style="--title-color: #55006e;">KA か</a>
@@ -33,6 +34,7 @@ const sidebarContent = `
     <a href="jap_timeSufix.html" style="--title-color: #d6d300;">Setsubiji せつびじ</a>
     <h3 style="--title-color: #ffa600; --title-bg: #ffedcb;">Liczby i Liczenie</h3>
     <a href="jap_numbers100.html" style="--title-color: #ffa600;">Suuji Hyaku すうじ百</a>
+    <a href="jap_numbers.html" style="--title-color: #ffa600;">Liczenie</a>
     <h3 style="--title-color: #3eafdb; --title-bg: #a9c7d3;">Szkoła, Praca, Rodzina</h3>
     <a href="jap_schoolVocabulary.html" style="--title-color: #3eafdb;">Gakkou 学校</a>
     <a href="jap_workVocabulary.html" style="--title-color: #3eafdb;">Shigoto しごと</a>
