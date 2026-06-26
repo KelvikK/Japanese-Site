@@ -35,6 +35,9 @@ const database = [
     { name: 'Gimonshi', id: '00000014', url: 'JAP/jap_questions.html', theme: '#00973f', theme_sub: '#b2e6c8', 
         tags: ['słowa_pytające']
     },
+    { name: 'Zdania JLPTN5', id: '00000027', url: 'JAP/jap_dialogues.html', theme: '#00973f', theme_sub: '#b2e6c8', 
+        tags: ['JLPTN5']
+    },
     { name: 'Desu', id: '00000015', url: 'JAP/jap_desu.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
         tags: ['gramatyka', 'desu']
     },
@@ -52,6 +55,9 @@ const database = [
     },
     { name: 'NO', id: '00000018', url: 'JAP/jap_particlesNO.html', theme: '#6fffe0', theme_sub: '#f4fffd', 
         tags: ['partykuły', 'no']
+    },
+    { name: 'MO', id: '00000028', url: 'JAP/jap_particlesMO.html', theme: '#a700a7', theme_sub: '#c5b6c5', 
+        tags: ['partykuły', 'mo']
     },
     { name: 'Jikan Tango', id: '00000006', url: 'JAP/jap_timeVocabulary.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
         tags: ['słownictwo', 'czas']
@@ -85,6 +91,9 @@ const database = [
     },
     { name: 'Sklep', id: '00000023', url: 'JAP/jap_shoppingVocabulary.html', theme: '#f25dff', theme_sub: '#fef0ff', 
         tags: ['słownictwo', 'sklep']
+    },
+    { name: 'Miasto', id: '00000026', url: 'JAP/jap_machiVocabulary.html', theme: '#f25dff', theme_sub: '#fef0ff', 
+        tags: ['słownictwo', 'miasto']
     }
 ]
 
@@ -103,6 +112,7 @@ const tagColors = {
     'kaiwa': { color: '#00973f' },
     'zaimki': { color: '#00973f' },
     'słowa_pytające': { color: '#00973f' },
+    'JLPTN5': { color: '#00973f' },
     'gramatyka': { color: '#ff1212' },
     'desu': { color: '#ff1212' },
     'wskazywanie': { color: '#ff1212' },
@@ -110,6 +120,7 @@ const tagColors = {
     'wa': { color: '#3300CC' },
     'ka': { color: '#55006e' },
     'no': { color: '#6fffe0' },
+    'mo': { color: '#a700a7' },
     'słownictwo': { color: '#d6d300' },
     'czas': { color: '#d6d300' },
     'sufiksy': { color: '#d6d300' },
@@ -120,7 +131,8 @@ const tagColors = {
     'praca': { color: '#3eafdb' },
     'rodzina': { color: '#3eafdb' },
     'restauracja': { color: '#f25dff' },
-    'sklep': { color: '#f25dff' }
+    'sklep': { color: '#f25dff' },
+    'miasto': { color: '#f25dff' }
 };
 
 //Liczenie Tagów

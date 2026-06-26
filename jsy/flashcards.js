@@ -182,7 +182,18 @@ const flashcardsDatabase = [
         name: "Dore, Dono, Doko どれ、どの、どこ",
         activeColor: "#ff1212",
         cards: [
-            { q: "", a: "", hint: "" }
+            { q: "Doko ", a: "Gdzie?", hint: "" },
+            { q: "Koko ", a: "Tutaj", hint: "Blisko Siebie" },
+            { q: "Soko ", a: "Tutaj", hint: "Blisko Ciebie" },
+            { q: "Asoko ", a: "Tam", hint: "Daleko od nas" },
+            { q: "Kore ", a: "To", hint: "Blisko Siebie" },
+            { q: "Sore ", a: "To", hint: "Blisko Ciebie" },
+            { q: "Are ", a: "Tamto", hint: "Daleko od nas" },
+            { q: "Dore ", a: "Który/Jaki", hint: "" },
+            { q: "Kono ", a: "Ten...", hint: "Blisko Siebie. [...przedmiot]" },
+            { q: "Sono ", a: "Ten...", hint: "Blisko Ciebie. [...przedmiot]" },
+            { q: "Ano ", a: "Tamten...", hint: "Daleko od nas. [...przedmiot]" },
+            { q: "Dono ", a: "Który...", hint: "...Przedmiot." },
         ]
     },
     {
@@ -193,6 +204,7 @@ const flashcardsDatabase = [
             { q: "WA は", a: "Partykuła Tematu", hint: "Używana aby precyzować co jest tematem rozmowy." },
             { q: "KA か", a: "Partykuła Pytająca", hint: "Używana aby zmieniać zdanie w pytanie." },
             { q: "NO の", a: "Partykuła Przynależności", hint: "Używana aby zdefiniować czye coś jest lub stworzyć nowe słowa." },
+            { q: "MO も", a: "Partykuła Włączająca", hint: "Używana aby zdefiniować słowo 'także'. To też, On też, Zrobimy też to." }
         ]
     },
     {
@@ -299,7 +311,11 @@ const flashcardsDatabase = [
             { q: "Rekishi れきし", a: "Historia", hint: "" },
             { q: "Bungaku ぶんがく", a: "Literatura", hint: "" },
             { q: "Bijinesu ビジネス", a: "Biznes", hint: "Szkolny Przedmiot" },
-            { q: "Hon ほん", a: "Książka", hint: "" }
+            { q: "Hon ほん", a: "Książka", hint: "" },
+            { q: "Nooto ノート", a: "Zeszyt", hint: "" },
+            { q: "Jisho じしょ", a: "Słownik", hint: "" },
+            { q: "Pen/Boorupen ペン/ボールペン", a: "Długopis", hint: "" },
+            { q: "Enpitsu エンピツ", a: "Ołówek", hint: "" },
         ]
     },
     {
@@ -375,9 +391,35 @@ const flashcardsDatabase = [
             { q: "Konbini コンビニ", a: "Kiosk", hint: "Angielskie 'Convinient Store'." },
             { q: "Hanbai-in はんばいいん", a: "Sprzedawca", hint: "Osoba obsługująca kasę. Kasjer." },
             { q: "[Sklep] no Hito 「みせ」の人", a: "Osoba pracująca w danym sklepie", hint: "Można też mówić 'no ten'in'. Nigdy nie mówić 'Mise no ten'in'." },
-            { q: "~en　円", a: "Yen", hint: "Japońska Waluta. Lubię mówić na polską walutę ~kin czyli dosłownie złoto." },
+            { q: "~en 円", a: "Yen", hint: "Japońska Waluta. Lubię mówić na polską walutę ~kin czyli dosłownie złoto." },
             { q: "Saifu さいふ", a: "Portfel", hint: "" },
             { q: "Tokei とけい", a: "Zegar", hint: "Zegarek na ręke także." }
+        ]
+    },
+    {
+        id: "machi",
+        name: "Machi 町",
+        activeColor: "#f25dff",
+        cards: [
+            { q: "Toshi とし", a: "Duże Miasto", hint: "" },
+            { q: "Shi し", a: "Duże Miasto", hint: "Końcówka administracyjna dla Osaka i Kyoto" },
+            { q: "Machi 町", a: "Miasto", hint: "" },
+            { q: "Muramむら", a: "Wioska", hint: "" },
+            { q: "Tokai とかい", a: "Miast", hint: "W sensie przeciwnym do Wioski." },
+            { q: "Ku 区", a: "Dzielnica", hint: "Tokijska dzielnica." },
+            { q: "Todoufuken 都道府県", a: "Prefektury Japońskie", hint: "To, Do, Fu i Ken. Jak końcówki. Do niezależnie należy do Hokkaido." },
+            { q: "~ken ～けん", a: "...końcówka dla prefektury.", hint: "" },
+            { q: "~fu ～ふ", a: "...końcówka dla prefektury.", hint: "Osaka i Kyoto." },
+            { q: "~to ～と", a: "...końcówka dla prefektury i miasta jako jedno.", hint: "Tylko dla Tokyo." },
+            { q: "Ginkou ぎんこう", a: "Bank", hint: "" },
+            { q: "Toshokan としょかん", a: "Biblioteka", hint: "" },
+            { q: "Yuubinkyoku ゆうびんきょく", a: "Poczta", hint: "" },
+            { q: "Kafee カフェ", a: "Kawiarnia", hint: "" },
+            { q: "Kissaten きっさてん", a: "Kawiarnia Tradycyjna", hint: "Tradycyjna, bardziej sklep kawowy, desery i tak dalej." },
+            { q: "Shinbun しんぶん", a: "Gazeta", hint: "" },
+            { q: "Kasa かさ", a: "Parasol", hint: "" },
+            { q: "Kaban かばん", a: "Torba", hint: "Do noszenia przy ramieniu albo sklepowa, plecak." },
+            { q: "Jitensha じてんしゃ", a: "Rower", hint: "" }
         ]
     }
 ];
@@ -389,7 +431,7 @@ const groupsDatabase = [
     },
     {
         label: "Strona 2",
-        categoryIds: ["suuji", "resutoran", "kaimono", "dore"]
+        categoryIds: ["suuji", "resutoran", "kaimono", "machi", "dore"]
     }
 ];
 

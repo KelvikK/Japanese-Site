@@ -18,6 +18,7 @@ const sidebarContent = `
     <a href="jap_dialog1.html" style="--title-color: #00973f;">Kaiwa かいわ</a>
     <a href="jap_pronouns.html" style="--title-color: #00973f;">Daimeishi 代名詞</a>
     <a href="jap_questions.html" style="--title-color: #00973f;">Gimonshi 疑問詞</a>
+    <a href="jap_dialogues.html" style="--title-color: #00973f;">Zdania i Frazy JLPTN5</a>
     <h3 style="--title-color: #ff1212; --title-bg: #ffc8c8;">Gramatyka JLPTN5</h3>
     <a href="jap_desu.html" style="--title-color: #ff1212;">Desu です</a>
     <a href="jap_jisaifun.html" style="--title-color: #ff1212;">Jikan じかん / Toshi とし</a>
@@ -26,6 +27,7 @@ const sidebarContent = `
     <a href="jap_particlesWA.html" style="--title-color: #3300CC;">WA は</a>
     <a href="jap_particlesKA.html" style="--title-color: #55006e;">KA か</a>
     <a href="jap_particlesNO.html" style="--title-color: #6fffe0;">NO の</a>
+    <a href="jap_particlesMO.html" style="--title-color: #a700a7;">MO も</a>
     <h3 style="--title-color: #74e249; --title-bg: #d1e7c8;">Kraj, Narodowość, Języki</h3>
     <a href="jap_countryVocabulary.html" style="--title-color: #74e249;">Kuni くに</a>
     <a href="jap_countryPerson.html" style="--title-color: #74e249;">Kokuseki 国籍</a>
@@ -42,6 +44,7 @@ const sidebarContent = `
     <h3 style="--title-color: #f25dff; --title-bg: #fef0ff;">Restauracja, Sklep, Miasto</h3>
     <a href="jap_restaurantVocabulary.html" style="--title-color: #f25dff;">Resutoran レストラン</a>
     <a href="jap_shoppingVocabulary.html" style="--title-color: #f25dff;">Kaimono 買い物</a>
+    <a href="jap_machiVocabulary.html" style="--title-color: #f25dff;">Machi 町</a>
     <hr>
 </aside>
 `;
