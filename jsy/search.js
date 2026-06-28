@@ -39,13 +39,16 @@ const database = [
         tags: ['JLPTN5']
     },
     { name: 'Desu', id: '00000015', url: 'JAP/jap_desu.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
-        tags: ['gramatyka', 'desu']
+        tags: ['gramatyka', 'desu', 'negacja']
     },
     { name: 'Godzina', id: '00000020', url: 'JAP/jap_jisaifun.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
         tags: ['gramatyka', 'numery', 'czas', 'sufiksy', 'słownictwo']
     },
     { name: 'Wskazywanie', id: '00000025', url: 'JAP/jap_pointing.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
         tags: ['gramatyka', 'wskazywanie', 'słownictwo']
+    },
+    { name: 'Czasowniki I', id: '00000033', url: 'JAP/jap_verbs1.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
+        tags: ['gramatyka', 'czasowniki', 'słownictwo']
     },
     { name: 'WA', id: '00000016', url: 'JAP/jap_particlesWA.html', theme: '#3300CC', theme_sub: '#a8a1bd', 
         tags: ['partykuły', 'wa']
@@ -59,11 +62,20 @@ const database = [
     { name: 'MO', id: '00000028', url: 'JAP/jap_particlesMO.html', theme: '#a700a7', theme_sub: '#c5b6c5', 
         tags: ['partykuły', 'mo']
     },
+    { name: 'YONE', id: '00000029', url: 'JAP/jap_particlesYONE.html', theme: '#c5b7e1', theme_sub: '#ffffff', 
+        tags: ['partykuły', 'yo', 'ne']
+    },
     { name: 'Jikan Tango', id: '00000006', url: 'JAP/jap_timeVocabulary.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
         tags: ['słownictwo', 'czas']
     },
     { name: 'Jikan Setsubiji', id: '00000007', url: 'JAP/jap_timeSufix.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
         tags: ['słownictwo', 'czas', 'sufiksy']
+    },
+    { name: 'Dni i Miesiące', id: '00000031', url: 'JAP/jap_timeDayMonth.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
+        tags: ['słownictwo', 'czas', 'sufiksy', 'dniimiesiące']
+    },
+    { name: 'Częstotliwość', id: '00000032', url: 'JAP/jap_timeAdverbs.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
+        tags: ['słownictwo', 'czas', 'częstotliwość']
     },
     { name: 'Numery 0-100', id: '00000019', url: 'JAP/jap_numbers100.html', theme: '#ffa600', theme_sub: '#ffedcb', 
         tags: ['numery']
@@ -94,6 +106,9 @@ const database = [
     },
     { name: 'Miasto', id: '00000026', url: 'JAP/jap_machiVocabulary.html', theme: '#f25dff', theme_sub: '#fef0ff', 
         tags: ['słownictwo', 'miasto']
+    },
+    { name: 'Jedzenie', id: '00000030', url: 'JAP/jap_foodVocabulary.html', theme: '#0e7b22', theme_sub: '#b7f2c6', 
+        tags: ['słownictwo', 'jedzenie']
     }
 ]
 
@@ -115,7 +130,9 @@ const tagColors = {
     'JLPTN5': { color: '#00973f' },
     'gramatyka': { color: '#ff1212' },
     'desu': { color: '#ff1212' },
+    'negacja': { color: '#ff1212' },
     'wskazywanie': { color: '#ff1212' },
+    'czasowniki': { color: '#ff1212' },
     'partykuły': { color: '#464646' },
     'wa': { color: '#3300CC' },
     'ka': { color: '#55006e' },
@@ -123,6 +140,8 @@ const tagColors = {
     'mo': { color: '#a700a7' },
     'słownictwo': { color: '#d6d300' },
     'czas': { color: '#d6d300' },
+    'sufiksy': { color: '#d6d300' },
+    'dniimiesiące': { color: '#d6d300' },
     'sufiksy': { color: '#d6d300' },
     'numery': { color: '#ffa600' },
     'kraj': { color: '#74e249' },

@@ -7,7 +7,7 @@
 
 body {
     background-image: 
-        linear-gradient(rgba(224, 224, 224, 0.92), rgba(224, 224, 224, 0.95)), url('../images/SarueiASMR.jpg');
+        linear-gradient(rgba(224, 224, 224, 0.80), rgba(224, 224, 224, 0.95)), url('../images/Baelsus.png');
     
     /* Centrujemy grafikę i sprawiamy, że pokrywa cały ekran */
     background-position: center;

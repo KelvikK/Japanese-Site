@@ -23,17 +23,21 @@ const sidebarContent = `
     <a href="jap_desu.html" style="--title-color: #ff1212;">Desu です</a>
     <a href="jap_jisaifun.html" style="--title-color: #ff1212;">Jikan じかん / Toshi とし</a>
     <a href="jap_pointing.html" style="--title-color: #ff1212;">Dore, Sono, Doko どれ、どの、どこ</a>
+    <a href="jap_verbs1.html" style="--title-color: #ff1212;">Doushi ごだん、いちだん、ふきそく</a>
     <h3 style="--title-color: #464646; --title-bg: #e0e0e0;">Partykuły</h3>
     <a href="jap_particlesWA.html" style="--title-color: #3300CC;">WA は</a>
     <a href="jap_particlesKA.html" style="--title-color: #55006e;">KA か</a>
     <a href="jap_particlesNO.html" style="--title-color: #6fffe0;">NO の</a>
     <a href="jap_particlesMO.html" style="--title-color: #a700a7;">MO も</a>
+    <a href="jap_particlesYONE.html" style="--title-color: #c5b7e1;">YO よ i NE ね</a>
     <h3 style="--title-color: #74e249; --title-bg: #d1e7c8;">Kraj, Narodowość, Języki</h3>
     <a href="jap_countryVocabulary.html" style="--title-color: #74e249;">Kuni くに</a>
     <a href="jap_countryPerson.html" style="--title-color: #74e249;">Kokuseki 国籍</a>
     <h3 style="--title-color: #d6d300; --title-bg: #e9e8c9;">Daty i Czas</h3>
     <a href="jap_timeVocabulary.html" style="--title-color: #d6d300;">Tango たんご</a>
     <a href="jap_timeSufix.html" style="--title-color: #d6d300;">Setsubiji せつびじ</a>
+    <a href="jap_timeDayMonth.html" style="--title-color: #d6d300;">Hi to Tsuki 日と月</a>
+    <a href="jap_timeAdverbs.html" style="--title-color: #d6d300;">Częstotliwość</a>
     <h3 style="--title-color: #ffa600; --title-bg: #ffedcb;">Liczby i Liczenie</h3>
     <a href="jap_numbers100.html" style="--title-color: #ffa600;">Suuji Hyaku すうじ百</a>
     <a href="jap_numbers.html" style="--title-color: #ffa600;">Liczenie</a>
@@ -45,6 +49,8 @@ const sidebarContent = `
     <a href="jap_restaurantVocabulary.html" style="--title-color: #f25dff;">Resutoran レストラン</a>
     <a href="jap_shoppingVocabulary.html" style="--title-color: #f25dff;">Kaimono 買い物</a>
     <a href="jap_machiVocabulary.html" style="--title-color: #f25dff;">Machi 町</a>
+    <h3 style="--title-color: #0e7b22; --title-bg: #b7f2c6;">Jedzenie, Warzywa i Owoce, Zwierzęta</h3>
+    <a href="jap_foodVocabulary.html" style="--title-color: #0e7b22;">Tabemono たべもの</a>
     <hr>
 </aside>
 `;

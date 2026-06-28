@@ -174,7 +174,9 @@ const flashcardsDatabase = [
         name: "Dōshi 動詞 0-100",
         activeColor: "#ff1212",
         cards: [
-            { q: "Desu です", a: "Być", hint: "Czasownik ten ma wiele zastosowań. Więcej niż tylko 'być'." }
+            { q: "Desu です", a: "Być", hint: "Czasownik ten ma wiele zastosowań. Więcej niż tylko 'być'." },
+            { q: "Iku いく", a: "Iść", hint: "Godan" },
+            { q: "Taberu たべる", a: "Jeść", hint: "Ichidan" }
         ]
     },
     {
@@ -204,7 +206,9 @@ const flashcardsDatabase = [
             { q: "WA は", a: "Partykuła Tematu", hint: "Używana aby precyzować co jest tematem rozmowy." },
             { q: "KA か", a: "Partykuła Pytająca", hint: "Używana aby zmieniać zdanie w pytanie." },
             { q: "NO の", a: "Partykuła Przynależności", hint: "Używana aby zdefiniować czye coś jest lub stworzyć nowe słowa." },
-            { q: "MO も", a: "Partykuła Włączająca", hint: "Używana aby zdefiniować słowo 'także'. To też, On też, Zrobimy też to." }
+            { q: "MO も", a: "Partykuła Włączająca", hint: "Używana aby zdefiniować słowo 'także'. To też, On też, Zrobimy też to." },
+            { q: "YO よ", a: "Partykuła Kończąca", hint: "Używana aby wzmocnić wydźwięk zdania. Moim zdaniem do przyzwyczajenia się w praktyce." },
+            { q: "NE ね", a: "Partykuła Kończąca", hint: "Używana aby zmienić zdanie w styl pytający ale nie jest to pytanie, bardziej szukanie potwierdzenia. 'Jest gorąco, prawda?'. Moim zdaniem do przyzwyczajenia się w praktyce." }
         ]
     },
     {
@@ -249,7 +253,77 @@ const flashcardsDatabase = [
             { q: "~sai ～さい", a: "...wiek", hint: "" },
             { q: "~ji ～じ", a: "...godzina", hint: "" },
             { q: "~fun/~pun ～ふん/～ぷん", a: "...minuta", hint: "" },
-            { q: "~nensei ～ねんせい", a: "...rok na studiach", hint: "" }
+            { q: "~nensei ～ねんせい", a: "...rok na studiach", hint: "" },
+            { q: "~nichi ～にち", a: "...dni", hint: "" },
+            { q: "~kagetsu ～かげつ", a: "...miesiące", hint: "" },
+            { q: "Tsuitachi ついたち", a: "Pierwszy Dzień Miesiąca", hint: "" },
+            { q: "Futsuka ふつか", a: "Drugi Dzień Miesiąca", hint: "" },
+            { q: "Mikka みっか", a: "Trzeci Dzień Miesiąca", hint: "" },
+            { q: "Yokka よっか", a: "Czwarty Dzień Miesiąca", hint: "" },
+            { q: "Itsuka いつか", a: "Piąty Dzień Miesiąca", hint: "" },
+            { q: "Muika むいか", a: "Szósty Dzień Miesiąca", hint: "" },
+            { q: "Nanoka なのか", a: "Siódmy Dzień Miesiąca", hint: "" },
+            { q: "Youka ようか", a: "Ósmy Dzień Miesiąca", hint: "" },
+            { q: "Kokonoka ここのか", a: "Dziewiąty Dzień Miesiąca", hint: "" },
+            { q: "Touka とうか", a: "Dziesiąty Dzień Miesiąca", hint: "" },
+            { q: "Juuyokka じゅうよっか", a: "Czternasty Dzień Miesiąca", hint: "" },
+            { q: "Hatsuka はつか", a: "Dwudziesty Dzień Miesiąca", hint: "" },
+            { q: "Nijuuyokka にじゅうよっか", a: "Dwudziesty Czwarty Dzień Miesiąca", hint: "" },
+            { q: "Ikkagetsu いっかげつ", a: "Jeden Miesiąc", hint: "" },
+            { q: "Nikagetsu にかげつ", a: "Dwa Miesiące", hint: "" },
+            { q: "Sankagetsu さんかげつ", a: "Trzy Miesiące", hint: "" },
+            { q: "Yonkagetsu よんかげつ", a: "Cztery Miesiące", hint: "" },
+            { q: "Gokagetsu ごかげつ", a: "Pięć Miesięcy", hint: "" },
+            { q: "Rokkagetsu ろっかげつ", a: "Sześć Miesięcy", hint: "" },
+            { q: "Nanakagetsu ななかげつ", a: "Siedem Miesięcy", hint: "" },
+            { q: "Hachikagetsu はちかげつ", a: "Osiem Miesięcy", hint: "" },
+            { q: "Kyuukagetsu きゅうかげつ", a: "Dziewięć Miesięcy", hint: "" },
+            { q: "Juukkagetsu じゅうっかげつ", a: "Dziesięć Miesięcy", hint: "" },
+            { q: "Juuikkagetsu じゅういっかげつ", a: "Jedenaście Miesięcy", hint: "" },
+            { q: "Juunikagetsu じゅうにかげつ", a: "Dwanaście Miesięcy", hint: "" }
+        ]
+    },
+    {
+        id: "jikan2",
+        name: "Jikan Niban じかん二ばん",
+        activeColor: "#d6d300",
+        cards: [
+            { q: "~goro ", a: "~około", hint: "Dla czasu" },
+            { q: "Asa ", a: "Rano", hint: "" },
+            { q: "Shougo ", a: "Południe", hint: "pora dnia" },
+            { q: "Hiru ", a: "Środek Dnia", hint: "" },
+            { q: "Yuugata/Ban ", a: "Wieczór", hint: "Ban może oznaczać późniejszy wieczór." },
+            { q: "Yoru ", a: "Noc", hint: "" },
+            { q: "Mayonaka ", a: "Północ", hint: "" },
+            { q: "Mainichi ", a: "Każdego Dnia", hint: "" },
+            { q: "Maiban ", a: "Każdego Wieczora", hint: "" },
+            { q: "Shuu ", a: "Tydzień", hint: "" },
+            { q: "Kesa ", a: "Tego Ranka", hint: "" },
+            { q: "Konshuu ", a: "Tego Tygodnia", hint: "" },
+            { q: "Kongetsu ", a: "Tego Miesiąca", hint: "" },
+            { q: "Kotoshi ", a: "Ten Rok", hint: "" },
+            { q: "Konban ", a: "Tego Wieczoru", hint: "" },
+            { q: "Kon'ya ", a: "Tej nocy", hint: "" },
+            { q: "Ototoshi ", a: "Dwa lata temu", hint: "" },
+            { q: "Ototoi ", a: "Przedwczoraj", hint: "" },
+            { q: "Kyou ", a: "Dzisiaj", hint: "" },
+            { q: "Kinou ", a: "Wczoraj", hint: "" },
+            { q: "Ashita ", a: "Jutro", hint: "" },
+            { q: "Asatte ", a: "Pojutrze", hint: "" },
+            { q: "Senshuu ", a: "Zeszły Tydzień", hint: "" },
+            { q: "Sengetsu ", a: "Zeszły Miesiąc", hint: "" },
+            { q: "Kyounen ", a: "Zeszły Rok", hint: "" },
+            { q: "Raishuu", a: "Następny Tydzień", hint: "" },
+            { q: "Raigetsu ", a: "Następny Miesiąc", hint: "" },
+            { q: "Rainen ", a: "Następny Rok", hint: "" },
+            { q: "Mae no Hi", a: "Dzień przed...", hint: "" },
+            { q: "Tsugi no Hi", a: "Dzień po...", hint: "" },
+            { q: "Itsumo いｓつも", a: "Zawsze", hint: "" },
+            { q: "Yoku よく", a: "Często", hint: "" },
+            { q: "Tokidoki ときどき", a: "Czasami", hint: "" },
+            { q: "Taitei たいてい", a: "Przeważnie", hint: "" },
+            { q: "Amari あまり", a: "Nie często", hint: "" },
+            { q: "Zenzen ぜんぜん", a: "Absolutnie/Wcale/Nigdy", hint: "Z negatywnym czasownik jest to 'Nigdy' lub 'Wcale'." }
         ]
     },
     {
@@ -316,6 +390,10 @@ const flashcardsDatabase = [
             { q: "Jisho じしょ", a: "Słownik", hint: "" },
             { q: "Pen/Boorupen ペン/ボールペン", a: "Długopis", hint: "" },
             { q: "Enpitsu エンピツ", a: "Ołówek", hint: "" },
+            { q: "Kokuban こくばん", a: "Czarna Tablica", hint: "Kredowa" },
+            { q: "Chooku チョーク", a: "Kreda", hint: "Do Tablicy" },
+            { q: "Keshigomu けしゴム", a: "Gumka", hint: "" },
+            { q: "Denki でんき", a: "Prąd, Elektryczność, Światło", hint: "Używane też do lamp na suficie i w codziennym użytku by mówić o włączaniu lub wyłączaniu światła." },
         ]
     },
     {
@@ -419,7 +497,38 @@ const flashcardsDatabase = [
             { q: "Shinbun しんぶん", a: "Gazeta", hint: "" },
             { q: "Kasa かさ", a: "Parasol", hint: "" },
             { q: "Kaban かばん", a: "Torba", hint: "Do noszenia przy ramieniu albo sklepowa, plecak." },
-            { q: "Jitensha じてんしゃ", a: "Rower", hint: "" }
+            { q: "Jitensha じてんしゃ", a: "Rower", hint: "" },
+            { q: "Ie いえ", a: "Dom", hint: "" },
+            { q: "Uchi うち", a: "Dom", hint: "Miejsce zamieszkania osoby." },
+            { q: "Eigakan えいがかん", a: "Kino", hint: "" },
+        ]
+    },
+    {
+        id: "tabemono",
+        name: "Tabemono たべもの",
+        activeColor: "#0e7b22",
+        cards: [
+            { q: "Teishoku ていしょく", a: "Japoński zestaw z jedzeniem", hint: "Taca z miseczkami, zupa i różne inne dania jak ryż i dodatki." },
+            { q: "Tabemono たべもの", a: "Jedzenie", hint: "" },
+            { q: "Nomimono のみもの", a: "Napoje", hint: "Picie" },
+            { q: "Supagettei スパゲッテイ", a: "Spagetti", hint: "" },
+            { q: "Karee カレー", a: "Curry", hint: "Kary" },
+            { q: "Soba そば", a: "Gryczany makaron japoński", hint: "" },
+            { q: "Udon うどん", a: "Gruby japoński makaron", hint: "" },
+            { q: "Sandoicchi サンドイッチ", a: "Kanapki", hint: "" },
+            { q: "Aisukuriimu アイスクリーム", a: "Lody", hint: "" },
+            { q: "Raamen ラーメン", a: "Ramen", hint: "" },
+            { q: "Hanbaagaa ハンバーガー", a: "Hamburger", hint: "" },
+            { q: "Ocha おちゃ", a: "Herbata", hint: "Zielona." },
+            { q: "Kocha こちゃ", a: "Herbata", hint: "Każda oprócz zielonej." },
+            { q: "Koora コーラ", a: "Coca Cola", hint: "" },
+            { q: "Sarada サラダ", a: "Sałatka", hint: "" },
+            { q: "Koohii コーヒー", a: "Kawa", hint: "" },
+            { q: "Juusu ジュース", a: "Sok", hint: "" },
+            { q: "Miruku ミルク", a: "Mleko", hint: "" },
+            { q: "Gyuunyuu ぎゅうにゅう", a: "Mleko", hint: "Od krowy, każde jest od krowy ale na sklepach na pułkach w kartonie to już miruku." },
+            { q: "Mizu 水", a: "Woda", hint: "" },
+            { q: "Tansansui 炭酸水", a: "Woda Gazowana", hint: "Można mówić ソーダ" },
         ]
     }
 ];
@@ -431,7 +540,7 @@ const groupsDatabase = [
     },
     {
         label: "Strona 2",
-        categoryIds: ["suuji", "resutoran", "kaimono", "machi", "dore"]
+        categoryIds: ["suuji", "resutoran", "kaimono", "machi", "dore", 'tabemono', 'jikan2']
     }
 ];
 
