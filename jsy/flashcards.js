@@ -176,7 +176,14 @@ const flashcardsDatabase = [
         cards: [
             { q: "Desu です", a: "Być", hint: "Czasownik ten ma wiele zastosowań. Więcej niż tylko 'być'." },
             { q: "Iku いく", a: "Iść", hint: "Godan" },
-            { q: "Taberu たべる", a: "Jeść", hint: "Ichidan" }
+            { q: "Taberu たべる", a: "Jeść", hint: "Ichidan" },
+            { q: "Suru する", a: "Robić/Grać", hint: "Nieregularny." },
+            { q: "Kuru くる", a: "Przyjśc", hint: "Nieregularny." },
+            { q: "Benkyou Suru べんきょうする", a: "Uczyć Się", hint: "Czasownik ...Suru" },
+            { q: "Naru なる", a: "Przyjśc", hint: "Godan." },
+            { q: "Neru ねる", a: "Spać", hint: "Ichidan." },
+            { q: "Nageru なげる", a: "Rzucać", hint: "Ichidan." },
+            { q: "Kaeru かえる", a: "Wracać", hint: "Godan." },
         ]
     },
     {
@@ -204,11 +211,16 @@ const flashcardsDatabase = [
         activeColor: "#464646",
         cards: [
             { q: "WA は", a: "Partykuła Tematu", hint: "Używana aby precyzować co jest tematem rozmowy." },
+            { q: "GA が", a: "Partykuła Podmiotu", hint: "Używana aby precyzować kto wykonuje czynność, kto jest podmiotem, kto jest." },
             { q: "KA か", a: "Partykuła Pytająca", hint: "Używana aby zmieniać zdanie w pytanie." },
             { q: "NO の", a: "Partykuła Przynależności", hint: "Używana aby zdefiniować czye coś jest lub stworzyć nowe słowa." },
             { q: "MO も", a: "Partykuła Włączająca", hint: "Używana aby zdefiniować słowo 'także'. To też, On też, Zrobimy też to." },
             { q: "YO よ", a: "Partykuła Kończąca", hint: "Używana aby wzmocnić wydźwięk zdania. Moim zdaniem do przyzwyczajenia się w praktyce." },
-            { q: "NE ね", a: "Partykuła Kończąca", hint: "Używana aby zmienić zdanie w styl pytający ale nie jest to pytanie, bardziej szukanie potwierdzenia. 'Jest gorąco, prawda?'. Moim zdaniem do przyzwyczajenia się w praktyce." }
+            { q: "NE ね", a: "Partykuła Kończąca", hint: "Używana aby zmienić zdanie w styl pytający ale nie jest to pytanie, bardziej szukanie potwierdzenia. 'Jest gorąco, prawda?'. Moim zdaniem do przyzwyczajenia się w praktyce." },
+            { q: "WO を", a: "Partykuła Obiektu", hint: "Używana aby zdefiniować obiekt zdania." },
+            { q: "DE で", a: "Partykuła Lokacji", hint: "Używana aby zdefiniować lokacje w której zdarzenie ma miejsce." },
+            { q: "NI に", a: "Partykuła Celu/Czasu/Stanu", hint: "Używana aby zdefiniować cel i czas, czynności. Rzucasz DO... Idziesz DO." },
+            { q: "HE へ", a: "Partykuła Wskazywania Kierunku", hint: "Używana najczęściej do przekazywania kierunku na przykład podróży, jest rzadsza niż に i często mylona z に." },
         ]
     },
     {
@@ -482,8 +494,8 @@ const flashcardsDatabase = [
             { q: "Toshi とし", a: "Duże Miasto", hint: "" },
             { q: "Shi し", a: "Duże Miasto", hint: "Końcówka administracyjna dla Osaka i Kyoto" },
             { q: "Machi 町", a: "Miasto", hint: "" },
-            { q: "Muramむら", a: "Wioska", hint: "" },
-            { q: "Tokai とかい", a: "Miast", hint: "W sensie przeciwnym do Wioski." },
+            { q: "Muraむら", a: "Wioska", hint: "" },
+            { q: "Tokai とかい", a: "Miasto", hint: "W sensie przeciwnym do Wioski." },
             { q: "Ku 区", a: "Dzielnica", hint: "Tokijska dzielnica." },
             { q: "Todoufuken 都道府県", a: "Prefektury Japońskie", hint: "To, Do, Fu i Ken. Jak końcówki. Do niezależnie należy do Hokkaido." },
             { q: "~ken ～けん", a: "...końcówka dla prefektury.", hint: "" },

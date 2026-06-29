@@ -50,6 +50,9 @@ const database = [
     { name: 'Czasowniki I', id: '00000033', url: 'JAP/jap_verbs1.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
         tags: ['gramatyka', 'czasowniki', 'słownictwo']
     },
+    { name: 'Czasowniki Baza 100', id: '00000039', url: 'JAP/jap_verbs100.html', theme: '#c300ff', theme_sub: '#f5d4ff', 
+        tags: ['czasowniki', 'słownictwo']
+    },
     { name: 'WA', id: '00000016', url: 'JAP/jap_particlesWA.html', theme: '#3300CC', theme_sub: '#a8a1bd', 
         tags: ['partykuły', 'wa']
     },
@@ -62,8 +65,23 @@ const database = [
     { name: 'MO', id: '00000028', url: 'JAP/jap_particlesMO.html', theme: '#a700a7', theme_sub: '#c5b6c5', 
         tags: ['partykuły', 'mo']
     },
-    { name: 'YONE', id: '00000029', url: 'JAP/jap_particlesYONE.html', theme: '#c5b7e1', theme_sub: '#ffffff', 
+    { name: 'YONE', id: '00000029', url: 'JAP/jap_particlesYONE.html', theme: '#c5b7e1', theme_sub: '#ffffff',
         tags: ['partykuły', 'yo', 'ne']
+    },
+    { name: 'WO', id: '00000034', url: 'JAP/jap_particlesWO.html', theme: '#ff9900', theme_sub: '#fff3e2', 
+        tags: ['partykuły', 'wo']
+    },
+    { name: 'DE', id: '00000035', url: 'JAP/jap_particlesDE.html', theme: '#7f6000', theme_sub: '#fffbf1', 
+        tags: ['partykuły', 'de']
+    },
+    { name: 'NI', id: '00000036', url: 'JAP/jap_particlesNI.html', theme: '#00ff00', theme_sub: '#e6ffe6', 
+        tags: ['partykuły', 'ni']
+    },
+    { name: 'NI', id: '00000037', url: 'JAP/jap_particlesHE.html', theme: '#b6d7a8', theme_sub: '#f6fff2', 
+        tags: ['partykuły', 'he']
+    },
+    { name: 'GA', id: '00000038', url: 'JAP/jap_particlesGA.html', theme: '#ff0000', theme_sub: '#ffd4d4', 
+        tags: ['partykuły', 'ga']
     },
     { name: 'Jikan Tango', id: '00000006', url: 'JAP/jap_timeVocabulary.html', theme: '#d6d300', theme_sub: '#e9e8c9', 
         tags: ['słownictwo', 'czas']
@@ -138,6 +156,13 @@ const tagColors = {
     'ka': { color: '#55006e' },
     'no': { color: '#6fffe0' },
     'mo': { color: '#a700a7' },
+    'wo': { color: '#ff9900' },
+    'yo': { color: '#a64d79' },
+    'ne': { color: '#c5b7e1' },
+    'de': { color: '#7f6000' },
+    'ni': { color: '#00ff00' },
+    'he': { color: '#b6d7a8' },
+    'ga': { color: '#ff0000' },
     'słownictwo': { color: '#d6d300' },
     'czas': { color: '#d6d300' },
     'sufiksy': { color: '#d6d300' },

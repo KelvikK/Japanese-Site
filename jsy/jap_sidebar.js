@@ -24,12 +24,19 @@ const sidebarContent = `
     <a href="jap_jisaifun.html" style="--title-color: #ff1212;">Jikan じかん / Toshi とし</a>
     <a href="jap_pointing.html" style="--title-color: #ff1212;">Dore, Sono, Doko どれ、どの、どこ</a>
     <a href="jap_verbs1.html" style="--title-color: #ff1212;">Doushi ごだん、いちだん、ふきそく</a>
+    <h3 style="--title-color: #c300ff; --title-bg: #f5d4ff;">Baza Danych Czasowniki i Przymiotniki</h3>
+    <a href="jap_verbs100.html" style="--title-color: #c300ff;">動詞 零から百まで</a>
     <h3 style="--title-color: #464646; --title-bg: #e0e0e0;">Partykuły</h3>
     <a href="jap_particlesWA.html" style="--title-color: #3300CC;">WA は</a>
+    <a href="jap_particlesGA.html" style="--title-color: #ff0000;">GA が</a>
     <a href="jap_particlesKA.html" style="--title-color: #55006e;">KA か</a>
     <a href="jap_particlesNO.html" style="--title-color: #6fffe0;">NO の</a>
     <a href="jap_particlesMO.html" style="--title-color: #a700a7;">MO も</a>
     <a href="jap_particlesYONE.html" style="--title-color: #c5b7e1;">YO よ i NE ね</a>
+    <a href="jap_particlesWO.html" style="--title-color: #ff9900;">WO を</a>
+    <a href="jap_particlesDE.html" style="--title-color: #7f6000;">DE で</a>
+    <a href="jap_particlesNI.html" style="--title-color: #00ff00;">NI に</a>
+    <a href="jap_particlesHE.html" style="--title-color: #b6d7a8;">HE へ</a>
     <h3 style="--title-color: #74e249; --title-bg: #d1e7c8;">Kraj, Narodowość, Języki</h3>
     <a href="jap_countryVocabulary.html" style="--title-color: #74e249;">Kuni くに</a>
     <a href="jap_countryPerson.html" style="--title-color: #74e249;">Kokuseki 国籍</a>
