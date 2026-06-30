@@ -18,7 +18,7 @@ Neko ga Mio ni bakuhasaremashita!
 Isoide Nie mam czasu. I am in hurry.
 
 
-
+Twoje słowa: Kyou wa nani suru desu ka? Co znaczy to zdanie i dlaczego nie powiedzieć po prostu Nani suru ka?Zdanie Kyou wa nani suru desu ka? oznacza po japońsku "Co robimy dzisiaj?" lub "Co będziesz dzisiaj robić?".Oto rozbicie na części:Kyou (今日): dzisiajwa (は): partykuła tematunani (何): cosuru (する): robićdesu ka (ですか): grzeczne zakończenie pytaniaDlaczego nie powiedzieć po prostu "Nani suru ka"?Brak grzeczności (formy Desu/Masu): Zwrot Nani suru ka jest zbyt bezpośredni i niegrzeczny w codziennej komunikacji. W Japonii użycie samego ka na końcu zdania z czasownikiem w formie podstawowej bez desu brzmi bardzo surowo.Zmiana znaczenia: Gramatycznie Nani suru ka oznacza raczej „Zastanawiam się, co (on) zrobi” lub „Nie wiem, co zrobić”, a nie bezpośrednie pytanie do drugiej osoby o jej plany.Bardziej naturalne alternatywy w zależności od sytuacji:W luźnej rozmowie z przyjaciółmi (nieformalnie):Nani suru? (何する?) lub Nani suru no? (何するの?).W codziennej, miłej konwersacji (standardowo i uprzejmie):Kyou wa nani o shimasu ka? (今日何をしますか?) – dodanie partykuły o po słowie nani jest bardziej naturalne gramatycznie, a czasownik zmienia się na shimasu.Jeśli interesuje Cię nauka japońskiego, daj znać:Czy wolisz poznać więcej zwrotów grzecznych czy nieformalnych?Jakie inne sytuacje lub pytania chciałbyś przetłumaczyć?Odpowiedzi wygenerowane przez AI mogą zawierać błędy. Więcej informacji2 witrynyHow do you say "I don't know what to do"?Kajiyama: "I don't know what to do" would be more accurately "dou shitara ii ka wakaranai" because "what to do" actually really me...www.fromzero.comHow to ask, 'Are you going to do X?' in Japanese (casually)Using Ka Particle: The ka particle can be used to ask about both present and future actions, but context is crucial for clarity. S...QuoraTwoje słowa: A dlaczego na końcu zamiast desu jest ndesu z NDodanie litery „n” (skrót od no です / んです) całkowicie zmienia wydźwięk zdania, mimo że samo tłumaczenie na język polski pozostaje podobne.Forma „~ndesu ka?” to tzw. forma wyjaśniająca lub poszukująca kontekstu. Oto główne powody, dla których używa się jej zamiast zwykłego desu ka:1. Szukanie wyjaśnienia lub przyczynyZwykłe nani suru desu ka? to suche, neutralne pytanie o fakty. Użycie nani suru ndesu ka? sugeruje, że widzisz, że coś się dzieje (np. ktoś pakuje torbę, krząta się po pokoju) i pytasz: „O, a co Ty takiego właściwie dzisiaj robisz?”.2. Wyraz zaciekawienia lub troskiWtrącenie n łagodzi ton rozmowy i sprawia, że brzmi ona bardziej naturalnie i ciepło. Pokazuje, że jesteś żywo zainteresowany sytuacją rozmówcy, a nie tylko przeprowadzasz suchy wywiad.3. Skrót z języka mówionegoW gramatyce ta forma to no desu ka (のですか). W codziennej mowie Japończycy niemal zawsze skracają no do samego n, ponieważ jest to o wiele łatwiejsze do wymówienia.
 
 
 
@@ -57,6 +57,7 @@ I got better at something
 Definitelly
 Zettaini
 Saikin Recently
+Except
 Still
 Absolutely / Never
 But
