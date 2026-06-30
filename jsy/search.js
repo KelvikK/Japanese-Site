@@ -50,7 +50,7 @@ const database = [
     { name: 'Czasowniki I', id: '00000033', url: 'JAP/jap_verbs1.html', theme: '#ff1212', theme_sub: '#ffc8c8', 
         tags: ['gramatyka', 'czasowniki', 'słownictwo']
     },
-    { name: 'Czasowniki Baza 100', id: '00000039', url: 'JAP/jap_verbs100.html', theme: '#c300ff', theme_sub: '#f5d4ff', 
+    { name: 'Czasowniki Baza 126', id: '00000039', url: 'JAP/jap_verbs100.html', theme: '#c300ff', theme_sub: '#f5d4ff', 
         tags: ['czasowniki', 'słownictwo']
     },
     { name: 'WA', id: '00000016', url: 'JAP/jap_particlesWA.html', theme: '#3300CC', theme_sub: '#a8a1bd', 

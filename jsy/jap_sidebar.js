@@ -25,7 +25,7 @@ const sidebarContent = `
     <a href="jap_pointing.html" style="--title-color: #ff1212;">Dore, Sono, Doko どれ、どの、どこ</a>
     <a href="jap_verbs1.html" style="--title-color: #ff1212;">Doushi ごだん、いちだん、ふきそく</a>
     <h3 style="--title-color: #c300ff; --title-bg: #f5d4ff;">Baza Danych Czasowniki i Przymiotniki</h3>
-    <a href="jap_verbs100.html" style="--title-color: #c300ff;">動詞 零から百まで</a>
+    <a href="jap_verbs100.html" style="--title-color: #c300ff;">動詞 零から百二十六まで</a>
     <h3 style="--title-color: #464646; --title-bg: #e0e0e0;">Partykuły</h3>
     <a href="jap_particlesWA.html" style="--title-color: #3300CC;">WA は</a>
     <a href="jap_particlesGA.html" style="--title-color: #ff0000;">GA が</a>
